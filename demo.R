@@ -16,3 +16,10 @@ opt <- docopt(doc)
 print(opt)
 print(typeof(opt))
 print(opt[4])
+
+main <- function(){
+    print('Red')
+    print('Green')
+    print('Blue')
+}
+main()
