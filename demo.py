@@ -1,16 +1,17 @@
 # author: Aditya
-# date: 2020-11-19
+# date: 2020-11-21
 
-"This script prints out docopt args.
-Usage: demo.R <arg1> [<arg4>] --arg2=<arg2> [--arg3=<arg3>]
+"""This script prints out docopt args.
+Usage: docopt.py <arg1> --arg2=<arg2> [<arga>] [--arg3=<arg3>]
+
 Options:
 <arg>             Takes any value (this is a required positional argument)
-[<arg4>]          Takes any value (this is an optional positional argument)
 --arg2=<arg2>     Takes any value (this is a required option)
+[<arga>]          Takes any value (this is a optional positional)
 [--arg3=<arg3>]   Takes any value (this is an optional option)
-" -> doc
+"""
 
-library(docopt)
-opt <- docopt(doc)
+from docopt import docopt
+opt = docopt(__doc__)
 print(opt)
-print(typeof(opt))
+print(type(opt))
